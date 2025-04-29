@@ -1,0 +1,568 @@
+
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1953a0;
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: none;
+      list-style: none;
+    }
+
+    @media (min-width: 768px) {
+      nav ul {
+        display: flex;
+        gap: 24px;
+      }
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #1953a0;
+    }
+
+    .header-buttons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mobile-menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background-color: #1953a0;
+      color: white;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #164785;
+    }
+
+    .btn-secondary {
+      background-color: #ff6d2a;
+      color: white;
+      border: none;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e55a1a;
+    }
+
+    .btn-ghost {
+      background: none;
+      border: none;
+      color: #333;
+    }
+
+    .btn-ghost:hover {
+      background-color: #f3f4f6;
+    }
+
+    .user-icon, .search-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      background: #fff;
+      border-top: 1px solid #eee;
+      padding: 15px 0;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    /* Hero section */
+    .hero {
+      background-color: #1953a0;
+      padding: 48px 0;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+
+    .hero p {
+      margin-bottom: 32px;
+      opacity: 0.9;
+    }
+
+    .search-form {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .search-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .search-input {
+      height: 48px;
+      border-radius: 4px;
+      border: none;
+      padding: 0 16px;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .popular {
+      margin-top: 32px;
+      font-size: 14px;
+    }
+
+    .popular span {
+      text-decoration: underline;
+      cursor: pointer;
+      margin: 0 4px;
+    }
+
+    /* Practice areas */
+    .section {
+      padding: 48px 0;
+    }
+
+    .section-heading {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .section-heading {
+        font-size: 28px;
+      }
+    }
+
+    .section-subheading {
+      color: #666;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .practice-areas {
+      background-color: #f3f4f6;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .areas-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .area-card {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: #333;
+      transition: box-shadow 0.2s;
+    }
+
+    .area-card:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .area-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    /* Featured Lawyers */
+    .lawyers-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .lawyers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .lawyers-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .lawyer-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s;
+    }
+
+    .lawyer-card:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .lawyer-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+    .lawyer-info {
+      padding: 16px;
+    }
+
+    .lawyer-name {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .lawyer-firm {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .lawyer-area {
+      color: #1953a0;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .stars {
+      display: flex;
+      margin-top: 8px;
+      color: #f59e0b;
+    }
+
+    .lawyer-location {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .lawyer-footer {
+      padding: 16px;
+      border-top: 1px solid #eee;
+      text-align: center;
+    }
+
+    /* How It Works section */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+    }
+
+    .step-title {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    /* Legal Q&A */
+    .legal-qa {
+      background-color: #f3f4f6;
+    }
+
+    .qa-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .qa-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .qa-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s;
+    }
+
+    .qa-card:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .qa-content {
+      padding: 24px;
+    }
+
+    .qa-category {
+      color: #ff6d2a;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .qa-question {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .qa-answer {
+      color: #666;
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+
+    .qa-footer {
+      padding: 16px 24px;
+      border-top: 1px solid #eee;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .qa-meta {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .qa-meta strong {
+      font-weight: 600;
+    }
+
+    .ask-box {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .ask-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .ask-text {
+      color: #666;
+      margin-bottom: 24px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 48px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .footer-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .copyright {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .legal-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .legal-links a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .legal-links a:hover {
+      color: white;
+    }
